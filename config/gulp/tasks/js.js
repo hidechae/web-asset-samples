@@ -1,7 +1,7 @@
-import gulp       from 'gulp';
+import gulp from 'gulp';
 import browserify from 'browserify';
-import babelify   from 'babelify';
-import source     from "vinyl-source-stream";
+import babelify from 'babelify';
+import source from "vinyl-source-stream";
 
 let rootDir = './src/js';
 let watchTarget = rootDir + '/**/*.js';

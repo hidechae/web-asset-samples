@@ -1,21 +1,7 @@
-import gulp             from 'gulp'
-import rimraf           from 'rimraf';
-import postcss          from 'gulp-postcss';
-import cssImport        from 'postcss-import';
-import cssNested        from 'postcss-nested';
-import cssVars          from 'postcss-simple-vars';
-import cssInlineComment from 'postcss-inline-comment';
-import autoprefixer     from 'autoprefixer';
-import cssnano          from 'cssnano';
-
-let cssProcessors = [
-  cssImport,
-  cssNested,
-  cssVars,
-  cssInlineComment(),
-  autoprefixer({browsers: ['last 1 version']}),
-  cssnano()
-];
+import gulp from 'gulp'
+import rimraf from 'rimraf';
+import postcss from 'gulp-postcss';
+import {cssProcessors} from '../settings.js';
 
 let rootDir = './src/css';
 let watchTarget = rootDir + '/**/*.scss';
