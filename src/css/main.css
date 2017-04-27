@@ -1,5 +1,8 @@
-/* base */
-@import url(normalize.css);
-/* components */
+@import 'components/styleguide-base';
 
-/*# sourceMappingURL=main.css.map */
+/* base */
+/* @import 'normalize.css'; */
+
+/* components */
+@import 'components/selector';
+@import 'components/slider';

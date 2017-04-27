@@ -13,7 +13,7 @@ gulp.task('js:build', () => {
     entries: src,
     extensions: [".js"]
   })
-    .transform(babelify)
+    .transform(babelify, {presets: ['es2015']})
     .bundle()
     .on("error", function (err) {
       console.log("Error : " + err.message);

@@ -15,7 +15,7 @@ let jsSrc = './dist/js/**/*';
 let jsDist = dist + '/js-dist';
 let jsPath = '/js-dist/main.js';
 let watchTarget = [cssRootDir + '/**/*.css', jsRootDir + '/**/*.js'];
-let port = 3000;
+let port = 3900;
 
 gulp.task('styleguide:generate', () => {
   return gulp.src(styleguideTarget)
@@ -25,7 +25,7 @@ gulp.task('styleguide:generate', () => {
       rootPath: dist,
       overviewPath: 'README.md',
       styleVariables: styleVariables,
-      enableJade: true,
+      enablePug: true,
       parsers: {css: 'postcss'},
       port: port,
       extraHead: [`<script src="${jsPath}"></script>`],

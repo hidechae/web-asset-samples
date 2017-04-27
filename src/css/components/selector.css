@@ -1,0 +1,26 @@
+/*
+Selector
+
+JavaScriptで制御しているセレクターです。
+タブや、画像選択のような部分で使います。
+
+Markup:
+#example-selector.js_selector
+  .is-active(data-selector-item-id="item1") item1
+  div(data-selector-item-id="item2") item2
+  div(data-selector-item-id="item3") item3
+.js_selector-content(data-selector-content="example-selector")
+  #item1.is-active This is item1
+  #item2 This is item2
+  #item3 This is item3
+
+Styleguide 1.1.0
+ */
+
+.js_selector > * {
+    cursor: pointer;
+}
+
+.js_selector-content > *:not(.is-active) {
+    display: none;
+}
